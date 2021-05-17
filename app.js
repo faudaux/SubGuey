@@ -142,7 +142,6 @@ app.post("/pedido", function(req, res) {
   // , y suma todos los precios. Luego guarda un nuevo documento de la colección "Orders"
 
   const loop = async () => {
-    console.log("Start");
     for (var i = 0; i < items.length; i++) {
       let newIngredient = await addEverything(items[i])
       orderPrice += newIngredient.price;
@@ -169,8 +168,6 @@ app.post("/delete", (req, res) => {
   Order.findByIdAndDelete(order, function(err){
     if(err){
       console.log(err);
-    } else{
-      console.log("Success");
     }
   })
 
@@ -180,6 +177,11 @@ app.post("/delete", (req, res) => {
 
 
 
-app.listen(3000, function() {
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, function() {
   console.log("Escuchando en el puerto 3000");
 });
