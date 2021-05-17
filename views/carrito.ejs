@@ -1,0 +1,35 @@
+<%- include("head.ejs") %>
+
+<body>
+  <%- include("navbar.ejs") %>
+  <div class="cuadro main-div">
+    <ul class="list-group">
+      <%compras.forEach((compra) => { %>
+        <form action="/delete" method="post">
+          <li class="list-group-item">
+
+            <button class="btn btn-sm btn-danger" type="subtmit" name="deleted">X</button>
+            <input type="hidden" name="deletedList" value="<%=compra.id%>">
+          <%=  compra.orden.join(", ")%>
+
+          <p class="price">$<%=compra.price%></p></li>
+        </form>
+
+
+      <%  }) %>
+
+      <div>
+
+        <h1>Total: $<%=precioCompleto%></h1>
+        <button class="btn btn-large btn-primary" type="button" onclick="alert('LMAO You wish')">Pagar</button>
+      </div>
+
+    </ul>
+  </div>
+
+
+
+
+</body>
+
+<%- include("footer.ejs") %>

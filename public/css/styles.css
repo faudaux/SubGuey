@@ -1,0 +1,170 @@
+/* font-family: 'Architects Daughter', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Merriweather', serif; */
+body {
+  background-color: #ffce89;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+  color: #393e46;
+  padding-top: 7%;
+}
+
+
+
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+h3{
+  font-weight: 600;
+  text-decoration-style:dashed;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+}
+
+label {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+
+}
+
+label:hover {
+  font-weight: 600;
+  color: #222831;
+  cursor:pointer;
+}
+
+.list-group-item{
+  text-align: center;
+}
+
+.main-div{
+  margin: 2% 5%;
+  padding: 1% 2%;
+}
+
+.cuadro{
+  background-color:#ffdf99;
+  box-shadow: -5px 5px 10px #ebc784;
+}
+
+
+.principal{
+  font-weight: bolder;
+  font-size: 5rem;
+  text-shadow: 3px 1px 1px #ce1126;
+}
+
+  .subtitle{
+    font-size: 1.5rem;
+    font-family: 'Lobster', cursive;
+  }
+
+  .price{
+    font-family: 'Lato', sans-serif;
+    float: right;
+    text-align: right;
+    text-align: right;
+  }
+/* NAVBAR */
+.navbar a{
+    font-size: 1.3rem;
+    padding: 0;
+    }
+
+
+
+/* TITULO */
+
+
+.verde {
+  color: #006847;
+}
+
+.rojo {
+  color: #ce1126;
+}
+
+/* MAIN */
+
+.texto-principal {
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+.big {
+ font-size: 2rem;
+}
+
+
+
+.taco {
+  float: right;
+}
+
+/* PEDIDO */
+
+/* FOOTER */
+
+#footer{
+  text-align: center;
+  font-size: 1rem;
+  margin: 20px 0 0;
+}
+
+
+
+@media (max-width: 1000px) {
+  .main-div{
+    margin: 1% 3%;
+    padding: 1% 2%;
+  }
+  body{
+    padding-top: 10%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 40%;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .principal {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-div{
+    margin: 0;
+    padding: 1% 2%;
+  }
+  body{
+    padding-top: 15%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .principal {
+    font-size: 2.5rem;
+  }
+}
