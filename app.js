@@ -2,9 +2,10 @@ const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const dotenv = require('dotenv').config();
 
 
-mongoose.connect('mongodb+srv://admin-fede:federico1@cluster0.deuos.mongodb.net/comidaRapida?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DB_ENV, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
