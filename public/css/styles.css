@@ -180,6 +180,10 @@ label:hover {
     padding-top: 20%;
   }
 
+  .principal {
+    text-align: center;
+  }
+
   .subtitle {
     display: none;
   }
