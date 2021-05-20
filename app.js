@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const dotenv = require('dotenv').config();
 
 
-mongoose.connect( {
+mongoose.connect(process.env.MDB_LINK {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
