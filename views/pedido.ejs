@@ -6,12 +6,26 @@
     <h1 class="principal">¿Qué le vas a poner?</h1>
 
 
-    <div class="cuadro main-div">
-      <form  action="/carrito" method="get">
-        <button style="float: right;" class="btn btn-success btn-lg" type="submit" name="button">Ir al Carrito <i class="fas fa-shopping-cart"></i></button>
 
-      </form>
-      <h2>Ingredientes</h2>
+
+
+
+    <div class="cuadro main-div">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Ingredientes</h2>
+          </div>
+          <div class="col">
+            <form action="/carrito" method="get">
+              <button style="float: right;" class="btn small-button btn-success btn-lg" type="submit" name="button">Ir al Carrito <i class="fas fa-shopping-cart"></i></button>
+
+            </form>
+          </div
+        </div>
+      </div>
+
       <hr>
       <form action="/pedido" method="post">
 
@@ -25,9 +39,11 @@
             <%  ingredientes.forEach(function(ingrediente){ %>
             <%  if(ingrediente.type === tipo){ %>
             <%  if (ingrediente.type === "Tortilla" || ingrediente.type === "Carne") { %>
+
+
             <li class="list-group-item">
               <label> <%=ingrediente.name%>
-              <input class="form-check-input" type="radio" id=aaaa name="<%=ingrediente.type%>input" value="<%=ingrediente.name%>" required>
+                <input class="form-check-input" type="radio" id=aaaa name="<%=ingrediente.type%>input" value="<%=ingrediente.name%>" required>
               </label>
               <p class="price">$<%=ingrediente.price%></p>
             </li>
@@ -36,7 +52,7 @@
 
               <label>
                 <%=ingrediente.name%>
-               <input class="form-check-input" type="checkbox" name="<%=ingrediente.type%>input" value="<%=ingrediente.name%>">
+                <input class="form-check-input" type="checkbox" name="<%=ingrediente.type%>input" value="<%=ingrediente.name%>">
               </label>
 
               <p class="price">$<%=ingrediente.price%></p>
@@ -52,7 +68,7 @@
 
 
         <br>
-        <button class="btn btn-primary orden" type="submit" name="estaOrden">Añadir al Carrito</button>
+        <button class="btn btn-primary big-button" type="submit" name="estaOrden">Añadir al Carrito</button>
       </form>
     </div>
 

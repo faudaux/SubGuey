@@ -145,6 +145,12 @@ label:hover {
   .principal {
     font-size: 3rem;
   }
+
+  .big-button {
+    display: block;
+    width: 100%;
+
+  }
 }
 
 @media (max-width: 600px) {
@@ -157,7 +163,7 @@ label:hover {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .subtitle {
@@ -169,8 +175,25 @@ label:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   body{
-    padding-top: 25%;
+    padding-top: 20%;
   }
+
+  .subtitle {
+    display: none;
+  }
+
+  .explicacion {
+    padding-right: 15%;
+  }
+
+  .small-button{
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+
 }

@@ -5,16 +5,17 @@
 
 <body>
 
-  <%- include("navbar.ejs") %>
+
 
   <div class="main-div">
+    <%- include("navbar.ejs") %>
     <div class="texto-principal">
       <h1 class="principal verde">Pedí YA tu taco</h1>
       <h3 class="subtitle big rojo">¡Y ponele lo que vos quieras!</h3>
     </div>
     <img class="taco" src="/images/taco.png" alt="img-taco">
     <h1>¿Cómo?</h1>
-    <p>
+    <p class="explicacion">
        Desde nuestra página web elegís los ingredientes que quieras para tu taco, nosotros procesamos el pedido, lo armamos a tu medida y en seguida lo enviamo hacia tu casa.
     </p>
     <form action="/pedido" method="get">
