@@ -170,10 +170,11 @@ app.post("/delete", (req, res) => {
     if(err){
       console.log(err);
     }
+    res.redirect("/carrito")
   })
 
 
-  res.redirect("/carrito")
+
 })
 
 
