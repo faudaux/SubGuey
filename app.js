@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const dotenv = require('dotenv').config();
 
 
-mongoose.connect("mongodb+srv://admin-fede:federico1@cluster0.deuos.mongodb.net/comidaRapida?retryWrites=true&w=majority", {
+mongoose.connect( {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
