@@ -23,7 +23,7 @@ app.use(express.urlencoded({
 app.use("/pedido", pedido);
 app.use("/carrito", carrito);
 
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.render("index", {});
 });
 
@@ -34,6 +34,6 @@ if (port == null || port == "") {
   port = 3000;
 }
 
-app.listen(port, function () {
+app.listen(port, () => {
   console.log("Escuchando en el puerto 3000");
 });
