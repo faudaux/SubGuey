@@ -1,38 +1,32 @@
-<%- include("head.ejs") %>
+<%- include("partials/head.ejs") %>
 
 <body>
-  <%- include("navbar.ejs") %>
+  <%- include("partials/navbar.ejs") %>
   <div class="cuadro main-div">
-<ul class="list-group">
+    <ul class="list-group">
 
 
 
 
       <%compras.forEach((compra) => { %>
-  <form action="/delete" method="post">
-    <li class="list-group-item">
-        <div class="row">
-          <div class="col">
-            <button class="btn btn-sm btn-danger" type="subtmit" name="deleted">X</button>
+      <form action="/carrito" method="POST">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-sm btn-danger" type="subtmit" name="deleted">X</button>
 
-            <input type="hidden" name="deletedList" value="<%=compra.id%>">
+              <input type="hidden" name="deletedList" value="<%=compra.id%>">
+            </div>
+            <div class="col">
+              <%=  compra.orden.join(", ")%>
+            </div>
+            <div class="col">
+              <p class="price">$<%=compra.price%></p>
+            </div>
           </div>
-          <div class="col">
-            <%=  compra.orden.join(", ")%>
-          </div>
-          <div class="col">
-            <p class="price">$<%=compra.price%></p>
-          </div>
-        </div>
 
-
-
-
-
-
-
-          </li>
-        </form>
+        </li>
+      </form>
 
 
       <%  }) %>
@@ -51,4 +45,4 @@
 
 </body>
 
-<%- include("footer.ejs") %>
+<%- include("partials/footer.ejs") %>

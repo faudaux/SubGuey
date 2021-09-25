@@ -1,14 +1,16 @@
+<%- include("partials/head.ejs") %>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<%- include("head.ejs") %>
+
 
 <body>
 
 
 
   <div class="main-div">
-    <%- include("navbar.ejs") %>
+    <%- include("partials/navbar.ejs") %>
     <div class="texto-principal">
       <h1 class="principal verde">Pedí YA tu taco</h1>
       <h3 class="subtitle big rojo">¡Y ponele lo que vos quieras!</h3>
@@ -16,9 +18,10 @@
     <img class="taco" src="/images/taco.png" alt="img-taco">
     <h1>¿Cómo?</h1>
     <p class="explicacion">
-       Desde nuestra página web elegís los ingredientes que quieras para tu taco, nosotros procesamos el pedido, lo armamos a tu medida y en seguida lo enviamo hacia tu casa.
+      Desde nuestra página web elegís los ingredientes que quieras para tu taco, nosotros procesamos el pedido, lo
+      armamos a tu medida y en seguida lo enviamo hacia tu casa.
     </p>
-    <form action="/pedido" method="get">
+    <form action="/pedido" method="GET">
       <button class="btn btn-outline-success btn-lg" type="submit" name="button"><b>¡Armátelo acá!</b></button>
     </form>
 
@@ -26,7 +29,6 @@
 
 </body>
 
-<%- include("footer.ejs") %>
-
-
 </html>
+
+<%- include("partials/footer.ejs") %>

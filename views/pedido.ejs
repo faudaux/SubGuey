@@ -1,7 +1,7 @@
-<%- include("head.ejs") %>
+<%- include("partials/head.ejs") %>
 
 <body>
-  <%- include("navbar.ejs") %>
+  <%- include("partials/navbar.ejs") %>
   <div class="main-div">
     <h1 class="principal">¿Qué le vas a poner?</h1>
 
@@ -19,62 +19,64 @@
           </div>
           <div class="col">
             <form action="/carrito" method="get">
-              <button style="float: right;" class="btn small-button btn-success btn-lg" type="submit" name="button">Ir al Carrito <i class="fas fa-shopping-cart"></i></button>
+              <button style="float: right;" class="btn small-button btn-success btn-lg" type="submit" name="button">Ir
+                al Carrito <i class="fas fa-shopping-cart"></i></button>
 
             </form>
-          </div
+          </div </div> </div> <hr>
+          <form action="/pedido" method="post">
+
+
+            <% tipos.forEach(function(tipo) { %>
+            <h3><%=tipo%></h3>
+
+            <div class="form-check">
+              <ul class="list-group">
+                <br>
+                <%  ingredientes.forEach(function(ingrediente){ %>
+                <%  if(ingrediente.type === tipo){ %>
+                <%  if (ingrediente.type === "Tortilla" || ingrediente.type === "Carne") { %>
+
+
+                <li class="list-group-item">
+                  <label> <%=ingrediente.name%>
+                    <input class="form-check-input" type="radio" id=aaaa name="<%=ingrediente.type%>input"
+                      value="<%=ingrediente.name%>" required>
+                  </label>
+                  <p class="price">$<%=ingrediente.price%></p>
+                </li>
+                <%    } else { %>
+                <li class="list-group-item">
+
+                  <label>
+                    <%=ingrediente.name%>
+                    <input class="form-check-input" type="checkbox" name="<%=ingrediente.type%>input"
+                      value="<%=ingrediente.name%>">
+                  </label>
+
+                  <p class="price">$<%=ingrediente.price%></p>
+                </li>
+                <% } %>
+                <%    } %>
+                <%    }); %>
+                <br>
+              </ul>
+            </div>
+            <%  }); %>
+
+
+
+            <br>
+            <button class="btn btn-primary big-button" type="submit" name="estaOrden">Añadir al Carrito</button>
+          </form>
         </div>
+
+
+
       </div>
 
-      <hr>
-      <form action="/pedido" method="post">
 
-
-        <% tipos.forEach(function(tipo) { %>
-        <h3><%=tipo%></h3>
-
-        <div class="form-check">
-          <ul class="list-group">
-            <br>
-            <%  ingredientes.forEach(function(ingrediente){ %>
-            <%  if(ingrediente.type === tipo){ %>
-            <%  if (ingrediente.type === "Tortilla" || ingrediente.type === "Carne") { %>
-
-
-            <li class="list-group-item">
-              <label> <%=ingrediente.name%>
-                <input class="form-check-input" type="radio" id=aaaa name="<%=ingrediente.type%>input" value="<%=ingrediente.name%>" required>
-              </label>
-              <p class="price">$<%=ingrediente.price%></p>
-            </li>
-            <%    } else { %>
-            <li class="list-group-item">
-
-              <label>
-                <%=ingrediente.name%>
-                <input class="form-check-input" type="checkbox" name="<%=ingrediente.type%>input" value="<%=ingrediente.name%>">
-              </label>
-
-              <p class="price">$<%=ingrediente.price%></p>
-            </li>
-            <% } %>
-            <%    } %>
-            <%    }); %>
-            <br>
-          </ul>
-        </div>
-        <%  }); %>
-
-
-
-        <br>
-        <button class="btn btn-primary big-button" type="submit" name="estaOrden">Añadir al Carrito</button>
-      </form>
-    </div>
-
-
-
-  </div>
-
-  <%- include("footer.ejs") %>
 </body>
+
+
+<%- include("partials/footer.ejs") %>
